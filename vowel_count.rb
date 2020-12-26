@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Return the number (count) of vowels in the given string.
 # We will consider a, e, i, o, u as vowels for this Kata (but not y).
 # The input string will only consist of lower case letters and/or spaces.
@@ -6,10 +8,10 @@
 # camelCase due to codewars test format
 def getCount(input_str)
   regex = /[aeiou]/
-  input_str.split("").select { |char| char if char =~ regex }.count
+  input_str.split('').select { |char| char if char =~ regex }.count
 end
 
-print getCount("abracadabra")
+print getCount('abracadabra')
 # Test.assert_equals(getCount("abracadabra"), 5)
 # Test.assert_equals(getCount(""), 0)
 # Test.assert_equals(getCount("pear tree"), 4)
@@ -18,7 +20,7 @@ print getCount("abracadabra")
 
 # Other solutions:
 def getCount(inputStr)
-  inputStr.count("aeiou")
+  inputStr.count('aeiou')
 end
 
 def getCount(inputStr)
@@ -26,12 +28,10 @@ def getCount(inputStr)
 end
 
 def getCount(inputStr)
-  vogals = ["a", "e", "i", "o", "u"]
+  vogals = %w[a e i o u]
   count = 0
   inputStr.chars.each do |letter|
-    if vogals.include? letter
-      count += 1
-    end
+    count += 1 if vogals.include? letter
   end
   count
 end
