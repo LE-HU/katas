@@ -22,10 +22,6 @@ def divisors(input_number)
   end
 end
 
-# Test.assert_equals(divisors(15), [3,5])
-# Test.assert_equals(divisors(253), [11,23])
-# Test.assert_equals(divisors(24), [2,3,4,6,8,12])
-
 # Other solutions:
 
 def divisors(n)
