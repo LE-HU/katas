@@ -21,54 +21,53 @@
 
 # More about roman numerals - http://en.wikipedia.org/wiki/Roman_numerals
 
-
 # ---------
 # My Solutions:
 
 def solution(number)
   association_table = {
-    1 => "I",
-    5 => "V",
-    10 => "X",
-    50 => "L",
-    100 => "C",
-    500 => "D",
-    1000 => "M",
+    1 => 'I',
+    5 => 'V',
+    10 => 'X',
+    50 => 'L',
+    100 => 'C',
+    500 => 'D',
+    1000 => 'M'
   }
 
   literals_array = []
 
-  while number > 0 do
-    if (number >= 1000)
-      literals_array.push("M")
-      number -= 1000;
-    elsif (number >= 500)
-      literals_array.push("D")
-      number -= 500;
-    elsif (number >= 100)
-      literals_array.push("C")
-      number -= 100;
-    elsif (number >= 50)
-      literals_array.push("L")
-      number -= 50;
-    elsif (number >= 10)
-      literals_array.push("X")
-      number -= 10;
-    elsif (number >= 5)
-      literals_array.push("V")
-      number -= 5;
-    elsif (number >= 1)
-      literals_array.push("I")
-      number -= 1;
+  while number > 0
+    if number >= 1000
+      literals_array.push('M')
+      number -= 1000
+    elsif number >= 500
+      literals_array.push('D')
+      number -= 500
+    elsif number >= 100
+      literals_array.push('C')
+      number -= 100
+    elsif number >= 50
+      literals_array.push('L')
+      number -= 50
+    elsif number >= 10
+      literals_array.push('X')
+      number -= 10
+    elsif number >= 5
+      literals_array.push('V')
+      number -= 5
+    elsif number >= 1
+      literals_array.push('I')
+      number -= 1
     end
   end
 
   # Edge values that need to be subbed:
   # VIV = IX, XXXX = XL, LXL = XC, CCCC = CD, DCD = CM;
 
-  encoded_number = literals_array.join("")
-  encoded_number.gsub("IIII", "IV").gsub("VIV", "IX").gsub("XXXX", "XL")
-                .gsub("LXL", "XC").gsub("CCCC", "CD").gsub("DCD", "CM")
+  encoded_number = literals_array.join('')
+  encoded_number.gsub('IIII', 'IV').gsub('VIV', 'IX').gsub('XXXX', 'XL')
+                .gsub('LXL', 'XC').gsub('CCCC', 'CD').gsub('DCD', 'CM')
 end
 
 # ------------------------------

@@ -9,7 +9,7 @@
 # My solution:
 def solution(number)
   sum_of_multiples = (3...number).each_with_object([]) do |element, list|
-    list << element if (element % 3 == 0 || element % 5 == 0)
+    list << element if element % 3 == 0 || element % 5 == 0
   end.sum
 end
 
@@ -19,11 +19,9 @@ end
 #   (1...number).select {|i| i%3==0 || i%5==0}.inject(:+)
 # end
 
-
 # def solution(number)
 #   (1...number).select{|n| (n % 5).zero? || (n % 3).zero?}.reduce(:+)
 # end
-
 
 # def solution(number)
 #   num3 = (number-1)/3

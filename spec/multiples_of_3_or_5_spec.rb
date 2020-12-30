@@ -1,13 +1,12 @@
-require_relative("../multiples_of_3_or_5")
+require_relative('../multiples_of_3_or_5')
 
-describe "Multiplies of 3 or 5" do
-  it "returns the sum of all the multiplies of 3 or 5" do
+describe 'Multiplies of 3 or 5' do
+  it 'returns the sum of all the multiplies of 3 or 5' do
     expect(solution(10)).to eq(23)
     expect(solution(20)).to eq(78)
     expect(solution(200)).to eq(9168)
   end
 end
-
 
 # Kata tests
 

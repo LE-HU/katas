@@ -1,15 +1,14 @@
 require_relative '../roman_numerals_encoder'
 
-describe "Roman Numerals Encoder" do
-  it "encodes the arabic number into roman number" do
-    expect(solution(1)).to eq("I")
-    expect(solution(984)).to eq("CMLXXXIV")
-    expect(solution(21)).to eq("XXI")
-    expect(solution(1666)).to eq("MDCLXVI")
-    expect(solution(1989)).to eq("MCMLXXXIX")
+describe 'Roman Numerals Encoder' do
+  it 'encodes the arabic number into roman number' do
+    expect(solution(1)).to eq('I')
+    expect(solution(984)).to eq('CMLXXXIV')
+    expect(solution(21)).to eq('XXI')
+    expect(solution(1666)).to eq('MDCLXVI')
+    expect(solution(1989)).to eq('MCMLXXXIX')
   end
 end
-
 
 # kata tests
 
