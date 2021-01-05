@@ -7,11 +7,12 @@
 # Courtesy of projecteuler.net
 
 # My solution:
-def solution(number)
+def find_multiples(number)
   sum_of_multiples = (3...number).each_with_object([]) do |element, list|
     list << element if element % 3 == 0 || element % 5 == 0
   end.sum
 end
+
 
 # Other solutions:
 
