@@ -9,13 +9,13 @@
 #   end
 # end
 
-require_relative "../even_or_odd"
+require_relative '../even_or_odd'
 
-describe "Even or Odd" do
-  it "checks if integer is even/odd" do
-    expect(even_or_odd(2)).to eq("Even")
-    expect(even_or_odd(0)).to eq("Even")
-    expect(even_or_odd(7)).to eq("Odd")
-    expect(even_or_odd(-1)).to eq("Odd")
+describe 'Even or Odd' do
+  it 'checks if integer is even/odd' do
+    expect(even_or_odd(2)).to eq('Even')
+    expect(even_or_odd(0)).to eq('Even')
+    expect(even_or_odd(7)).to eq('Odd')
+    expect(even_or_odd(-1)).to eq('Odd')
   end
 end
